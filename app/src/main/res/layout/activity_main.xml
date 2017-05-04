@@ -4,6 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77050A28"
     tools:context="com.example.suadahaji.gravityview.MainActivity">
 
     <HorizontalScrollView
@@ -16,4 +17,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_90"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="45dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/logo_text"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+
+     <FrameLayout
+         android:layout_below="@id/logo_text"
+         android:id="@+id/signincontainer"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="20dp"/>
+
+     <FrameLayout
+         android:layout_below="@id/logo_text"
+         android:id="@+id/signupcontainer"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="20dp"
+         android:visibility="gone" />
 </RelativeLayout>
