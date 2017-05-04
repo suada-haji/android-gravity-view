@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         bg = (ImageView) findViewById(R.id.bg);
         gravityView = GravityView.getInstance(this)
-                .setImage(bg, R.drawable.image_one)
+                .setImage(bg, R.drawable.background)
                 .center();
 
         if (!gravityView.deviceSupported()) {
