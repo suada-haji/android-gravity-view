@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@id/logo_text"
-    android:layout_marginLeft="55dp"
-    android:layout_marginRight="55dp"
-    android:layout_marginTop="30dp">
+    android:layout_below="@id/logo_text">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,7 +117,7 @@
         android:id="@+id/btn_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="#01ffffff"
         android:fontFamily="sans-serif"
         android:minHeight="40dp"
@@ -128,5 +125,5 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="15dp"/>
 </LinearLayout>

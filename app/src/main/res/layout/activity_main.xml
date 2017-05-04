@@ -39,19 +39,13 @@
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
+    <FrameLayout
+        android:id="@+id/signinFragment"
+        android:layout_below="@id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="30dp"/>
 
-     <FrameLayout
-         android:layout_below="@id/logo_text"
-         android:id="@+id/signincontainer"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:layout_marginTop="20dp"/>
-
-     <FrameLayout
-         android:layout_below="@id/logo_text"
-         android:id="@+id/signupcontainer"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:layout_marginTop="20dp"
-         android:visibility="gone" />
 </RelativeLayout>

@@ -1,15 +1,24 @@
 package com.example.suadahaji.gravityview;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.suadahaji.gravityview.fragments.SignInFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import co.gofynd.gravityview.GravityView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView bg;
+    @BindView(R.id.bg)
+    ImageView bg;
+
     private GravityView gravityView;
 
     @Override
@@ -17,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bg = (ImageView) findViewById(R.id.bg);
+        ButterKnife.bind(this);
+
         gravityView = GravityView.getInstance(this)
                 .setImage(bg, R.drawable.background)
                 .center();
@@ -25,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
         if (!gravityView.deviceSupported()) {
             Toast.makeText(getBaseContext(), "Gyroscope sensor not available in your device", Toast.LENGTH_LONG).show();
         }
+        getSignInFragment();
+
+    }
+
+    public void getSignInFragment() {
+        FragmentManager manager = getSupportFragmentManager();
+        SignInFragment fragment = new SignInFragment();
+        manager.beginTransaction()
+                .replace(R.id.signinFragment, fragment)
+                .commit();
     }
 
     @Override
