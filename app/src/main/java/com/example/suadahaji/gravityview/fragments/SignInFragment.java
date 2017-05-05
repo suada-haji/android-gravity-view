@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.suadahaji.gravityview.listing.MoviesListActivity;
+import com.example.suadahaji.gravityview.views.MoviesListActivity;
 import com.example.suadahaji.gravityview.R;
 
 import butterknife.BindView;

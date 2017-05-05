@@ -1,4 +1,4 @@
-package com.example.suadahaji.gravityview;
+package com.example.suadahaji.gravityview.views;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.suadahaji.gravityview.R;
 import com.example.suadahaji.gravityview.fragments.SignInFragment;
 
 import butterknife.BindView;

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#050A28"
     android:fitsSystemWindows="true"
-    tools:context="com.example.suadahaji.gravityview.listing.MoviesListActivity">
+    tools:context="com.example.suadahaji.gravityview.views.MoviesListActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -28,6 +28,7 @@
         android:id="@+id/scrolling_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/NestedScrollBarStyle"
         android:layout_weight="1"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
@@ -40,6 +41,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/popular_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Popular"
@@ -48,18 +50,71 @@
                 android:textColor="#FAFAFA" />
 
             <HorizontalScrollView
+                android:id="@+id/hsv_popular_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:id="@+id/popular_movies"
+                    android:id="@+id/ll_popular_movies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" />
 
             </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/upcoming_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="#FAFAFA"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_upcoming_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_upcoming_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/now_playing_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Playing"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="#FAFAFA"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_now_playing_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_now_playing_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"/>
+
+            </HorizontalScrollView>
         </LinearLayout>
+
+
 
     </android.support.v4.widget.NestedScrollView>
 
