@@ -4,7 +4,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.suadahaji.gravityview.MainActivity">
+    android:background="#77050A28"
+    tools:context="com.example.suadahaji.gravityview.views.MainActivity">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -16,4 +17,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_90"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="45dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/logo_text"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/signinFragment"
+        android:layout_below="@id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="30dp"/>
+
 </RelativeLayout>
