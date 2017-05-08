@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Html;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,5 +125,18 @@ public class SignInFragment extends Fragment {
             }
         });
 
+        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                ResetPasswordFragment fragment = new ResetPasswordFragment();
+                fm.beginTransaction()
+                        .replace(R.id.signinFragment, fragment)
+                        .commit();
+            }
+        });
+
     }
+
+
 }
