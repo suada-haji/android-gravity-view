@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "312165150423",
+    "firebase_url": "https://gravityview-54f92.firebaseio.com",
+    "project_id": "gravityview-54f92",
+    "storage_bucket": "gravityview-54f92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312165150423:android:d47da14fceb35fd3",
+        "android_client_info": {
+          "package_name": "com.example.suadahaji.gravityview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312165150423-29ck33vlqeq173827ftppu8gobe7oilk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.suadahaji.gravityview",
+            "certificate_hash": "deae3dbd93b990a1d368d6f0c2f2e10d30b1525a"
+          }
+        },
+        {
+          "client_id": "312165150423-tlj4vasppvfg0brpbku8b524qv2rj1oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUT4O1fZmZmxFp7O-oisYISfdgKauTuCE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312165150423-tlj4vasppvfg0brpbku8b524qv2rj1oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
