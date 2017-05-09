@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         gravityView = GravityView.getInstance(this)
-                .setImage(bg, R.drawable.background)
+                .setImage(bg, R.drawable.background_two)
                 .center();
 
         if (!gravityView.deviceSupported()) {
