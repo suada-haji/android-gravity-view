@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.suadahaji.gravityview.R;
@@ -34,12 +35,15 @@ public class MoviesListActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
+
     @BindView(R.id.popular_label)
     TextView popularLabel;
     @BindView(R.id.ll_popular_movies)
     LinearLayout llPopularMovies;
     @BindView(R.id.hsv_popular_container)
     HorizontalScrollView hsvPopularMovies;
+    @BindView(R.id.progress_one)
+    ProgressBar pbPopular;
 
     @BindView(R.id.now_playing_label)
     TextView nowPlayingLabel;
@@ -47,6 +51,8 @@ public class MoviesListActivity extends AppCompatActivity {
     LinearLayout ll_NowPlayingMovies;
     @BindView(R.id.hsv_now_playing_container)
     HorizontalScrollView hsvNowPlayingMovies;
+    @BindView(R.id.progress_two)
+    ProgressBar pbNowPlaying;
 
 
     @BindView(R.id.upcoming_label)
@@ -55,6 +61,8 @@ public class MoviesListActivity extends AppCompatActivity {
     LinearLayout ll_UpcomingMovies;
     @BindView(R.id.hsv_upcoming_container)
     HorizontalScrollView hsvUpcomingMovies;
+    @BindView(R.id.progress_three)
+    ProgressBar pbUpcoming;
 
     private ListPresenter presenter;
     private ApiModule apiModule;
@@ -111,6 +119,12 @@ public class MoviesListActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    public void hideProgressBar() {
+        pbPopular.setVisibility(View.GONE);
+        pbNowPlaying.setVisibility(View.GONE);
+        pbUpcoming.setVisibility(View.GONE);
     }
 
 

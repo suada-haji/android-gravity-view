@@ -39,13 +39,16 @@ public class ListPresenter {
                                 if (movieResponse == null || movieResponse.getMovies() == null || movieResponse.getMovies().size() == 0) {
                                     mView.displayEmptyState();
                                 }
+                                mView.hideProgressBar();
                                 List<Movie> movies = movieResponse.getMovies();
                                 mView.displayPopularMovies(movies);
+
                             }
                         }, new Action1<Throwable>() {
                             @Override
                             public void call(Throwable throwable) {
                                 mView.displayErrorState();
+                                mView.hideProgressBar();
                             }
                         });
 
@@ -62,6 +65,7 @@ public class ListPresenter {
                             public void call(MovieResponse movieResponse) {
                                 if (movieResponse == null || movieResponse.getMovies() == null || movieResponse.getMovies().size() == 0) {
                                     mView.displayEmptyState();
+                                    mView.hideProgressBar();
                                 }
                                 List<Movie> movies = movieResponse.getMovies();
                                 Log.d("Suada", "Size " + movies.size());
@@ -71,6 +75,7 @@ public class ListPresenter {
                             @Override
                             public void call(Throwable throwable) {
                                 mView.displayErrorState();
+                                mView.hideProgressBar();
                             }
                         });
 
@@ -90,11 +95,13 @@ public class ListPresenter {
                                 }
                                 List<Movie> movies = movieResponse.getMovies();
                                 mView.displayNowPlayingMovies(movies);
+                                mView.hideProgressBar();
                             }
                         }, new Action1<Throwable>() {
                             @Override
                             public void call(Throwable throwable) {
                                 mView.displayErrorState();
+                                mView.hideProgressBar();
                             }
                         });
 

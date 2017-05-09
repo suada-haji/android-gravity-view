@@ -29,7 +29,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="sans-serif-light"
             android:hint="Email"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:maxLines="1"
             android:textColor="@color/buttonColor"
             android:textColorHint="@color/buttonColor"

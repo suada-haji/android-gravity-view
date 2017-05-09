@@ -26,12 +26,12 @@
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrolling_container"
+        style="@style/NestedScrollBarStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/NestedScrollBarStyle"
-        android:layout_weight="1"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
+        android:layout_weight="1"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -44,10 +44,18 @@
                 android:id="@+id/popular_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popular"
-                android:textSize="20sp"
                 android:fontFamily="sans-serif"
-                android:textColor="#FAFAFA" />
+                android:text="Popular"
+                android:textColor="#FAFAFA"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:visibility="visible" />
 
             <HorizontalScrollView
                 android:id="@+id/hsv_popular_container"
@@ -68,11 +76,19 @@
                 android:id="@+id/upcoming_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upcoming"
-                android:textSize="20sp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
+                android:text="Upcoming"
                 android:textColor="#FAFAFA"
-                android:layout_marginTop="20dp"/>
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:visibility="visible" />
 
             <HorizontalScrollView
                 android:id="@+id/hsv_upcoming_container"
@@ -92,11 +108,19 @@
                 android:id="@+id/now_playing_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Now Playing"
-                android:textSize="20sp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
+                android:text="Now Playing"
                 android:textColor="#FAFAFA"
-                android:layout_marginTop="20dp"/>
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:visibility="visible" />
 
             <HorizontalScrollView
                 android:id="@+id/hsv_now_playing_container"
@@ -108,12 +132,11 @@
                     android:id="@+id/ll_now_playing_movies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal" />
 
             </HorizontalScrollView>
         </LinearLayout>
-
 
 
     </android.support.v4.widget.NestedScrollView>
